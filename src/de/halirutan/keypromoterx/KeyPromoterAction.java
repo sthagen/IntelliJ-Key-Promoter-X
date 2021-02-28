@@ -81,6 +81,7 @@ public class KeyPromoterAction {
     myDescription = event.getPresentation().getText();
     mySource = source;
     myShortcut = KeyPromoterUtils.getKeyboardShortcutsText(myIdeaActionID);
+    fixDescription();
   }
 
   /**
@@ -130,6 +131,12 @@ public class KeyPromoterAction {
     myMnemonic = source.getMnemonic2();
     if (myMnemonic > 0) {
       myDescription = myDescription.replaceFirst("\\d: ", "");
+    }
+
+    // Ugly hack to work around that the "Problems" tool-window does not follow the default naming of tool-windows.
+    // Hint: The ActionID is actually "ActivateProblemsViewToolWindow"
+    if ("Problems".equals(myDescription)) {
+      myDescription = "ProblemsView";
     }
     // This is hack, but for IDEA stripe buttons it doesn't seem possible to extract the IdeaActionID.
     // We turn e.g. "9: Version Control" to "ActivateVersionControlToolWindow" which seems to work for all tool windows
@@ -181,7 +188,21 @@ public class KeyPromoterAction {
     myDescription = anAction.getTemplatePresentation().getText();
     myIdeaActionID = ActionManager.getInstance().getId(anAction);
     myShortcut = KeyPromoterUtils.getKeyboardShortcutsText(myIdeaActionID);
+  }
 
+  /**
+   * Used to adjust Run and Debug descriptions so that the don't contain the name of the run-configuration
+   */
+  private void fixDescription() {
+    if (myDescription == null || myDescription.length() == 0) {
+      return;
+    }
+    if ("Debug".equals(myIdeaActionID) || "DebugClass".equals(myIdeaActionID)) {
+      myDescription = myDescription.replaceFirst("Debug '.*'", "Debug");
+    }
+    if ("Run".equals(myIdeaActionID) || "RunClass".equals(myIdeaActionID)) {
+      myDescription = myDescription.replaceFirst("Run '.*'", "Run");
+    }
   }
 
   ActionSource getSource() {

@@ -1,10 +1,35 @@
-[![banner](doc/img/kpxBanner.png)](https://www.patreon.com/halirutan)
-
-[Become a patron and support the Key Promoter X development](https://www.patreon.com/halirutan)
-
 ![Downloads Badge](https://img.shields.io/jetbrains/plugin/d/9792-key-promoter-x.svg)
 [![Build Status](https://travis-ci.org/halirutan/IntelliJ-Key-Promoter.svg?branch=KeyPromoterX)](https://travis-ci.org/halirutan/IntelliJ-Key-Promoter)
+![Plugin compatibility](https://github.com/halirutan/IntelliJ-Key-Promoter-X/workflows/Plugin%20compatibility/badge.svg)
 [![Join the chat at https://gitter.im/IntelliJ-Key-Promoter-X/Lobby](https://badges.gitter.im/IntelliJ-Key-Promoter-X/Lobby.svg)](https://gitter.im/IntelliJ-Key-Promoter-X/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
+[![banner](doc/img/kpxBanner.png)](https://github.com/sponsors/halirutan)
+
+---
+I'm grateful this project is currently sponsored by 
+
+[![CodeStream](https://alt-images.codestream.com/codestream_logo_keypromoterx.png)](https://sponsorlink.codestream.com/?utm_source=jbmarket&amp;utm_campaign=keypromoterx&amp;utm_medium=banner)
+
+and receives $4/month from
+[Daniel Babiak](https://github.com/dbabiak), 
+[Stefan Hagen](https://github.com/sthagen), 
+[Joshua Lückers](https://github.com/JoshuaLuckers),
+[jlash13](https://github.com/jlash13),
+[Mark McCorkle](https://github.com/mccorkle),
+$2/month from
+[Mac Adamarczuk](https://github.com/macalac),
+[Frank Harper](https://github.com/franklinharper), 
+[Christopher Kolstad](https://github.com/chriswk),
+[Søren Berg Glasius](https://github.com/sbglasius),
+[Sudhir Jonathan](https://github.com/sudhirj),
+[Hasnain Baxamoosa](https://github.com/hbaxamoosa),
+[James Haskell](https://github.com/JamesHaskell),
+[Ryan Quinn](https://github.com/ryanwilliamquinn),
+and $1/month from [21 other people](https://github.com/sponsors/halirutan).
+
+- [Become a GitHub Sponsor and support the Key Promoter X development](https://github.com/sponsors/halirutan)
+
+---
 
 The Key Promoter X is a plugin for IntelliJ-based products like IDEA, Android Studio, or CLion, and it helps to learn
 essential keyboard shortcuts from mouse actions while you are working.
@@ -27,7 +52,7 @@ Currently, it supports toolbar buttons, menu buttons, tool windows and the actio
 
 ## Installation
 
-The plugin can be installed with **Settings | Plugins | Browse Repositories** and no further set up is required. When a button is
+The plugin can be installed with **Settings | Plugins | Market Place** and searching for Key Promoter X. When a button is
 clicked with the mouse, a notification pops up that shows the shortcut which can be used instead. If a button has no shortcut and
 is pressed several times, a notification is shown that lets you easily create a shortcut for this action.
 
@@ -116,7 +141,7 @@ If you experience bugs or weird behavior please create an issue [on the bug trac
 The initial version was [implemented by
 Dmitry Kashin](https://code.google.com/p/key-promoter/)
 who unfortunately stopped maintaining the code and pushed the
-last version in 2012, more than 6 years ago.
+last version in 2012, more than 7 years ago.
 
 [User athiele](https://github.com/athiele/key-promoter-fork/commits/master)
 took the time to fork the original code, fix issues and provide

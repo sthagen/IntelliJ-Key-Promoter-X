@@ -96,9 +96,22 @@ public class KeyPromoterStatistics implements PersistentStateComponent<KeyPromot
   }
 
   @Transient
+  public void registerShortcutUsed(KeyPromoterAction action) {
+    synchronized (statistics) {
+      if (statistics.containsKey(action.getDescription())) {
+        statistics.get(action.getDescription()).registerShortcutUsed();
+        myChangeSupport.firePropertyChange(STATISTIC, null, null);
+      }
+    }
+  }
+
+  @Transient
   public void resetStatistic() {
     synchronized (statistics) {
       statistics.clear();
+    }
+    synchronized (suppressed) {
+      suppressed.clear();
     }
     myChangeSupport.firePropertyChange(STATISTIC, null, null);
   }
