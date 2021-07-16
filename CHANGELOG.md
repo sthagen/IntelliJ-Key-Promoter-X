@@ -1,9 +1,15 @@
 # Key Promoter X Changelog
 
 ## [Unreleased]
+
 ### Added
 
+- Build for IntelliJ Platform version 212
+- Add hot-reloading where updating the plugin does not require a restart
+
 ### Changed
+
+- Move to Gradle IntelliJ Plugin version 1.0
 
 ### Deprecated
 
@@ -11,7 +17,14 @@
 
 ### Fixed
 
+- Use `Application.getService()` for retrieving a service since using the `ServiceManager`
+  is deprecated. [See this page](https://plugins.jetbrains.com/docs/intellij/plugin-services.html#retrieving-a-service)
+- Changing how notifications are created due to deprecation of the old call
+- Use new version of `beforeActionPerformed()` due to deprecation of the old call
+- Smaller warnings regarding types
+
 ### Security
+
 ## [2021.1.1]
 
 - Update build system and use ideas from the
